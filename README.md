@@ -1,5 +1,6 @@
 # imagine
 Matlab viewer for multi-dimensional imaging data
+![imagine](https://github.com/lab-midas/imagine/blob/master/documentation/imagine.gif)
 
 ## Versioning
 v2.3: Improved rotation of flows and minor bugfixes<br/>
