@@ -1889,7 +1889,7 @@ drawnow expose
                     nDims = {SData(iSeriesInd).iActiveND(1), SData(iSeriesInd).iActiveND(2)};
                 end
             else
-                nDims = [1 1];
+                nDims = {1 1};
             end
             for i5D = nDims{2}
                 for i4D = nDims{1}
