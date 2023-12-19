@@ -127,7 +127,9 @@ SAp.dEmptyImg         = 0;                      % The background image (is calcu
 % Set some paths.
 SPref.sMFILEPATH    = fileparts(mfilename('fullpath'));                 % This is the path of this m-file
 SPref.sICONPATH     = [SPref.sMFILEPATH, filesep, 'icons', filesep];    % That's where the icons are
-SPref.sSaveFilename = [SPref.sMFILEPATH, filesep, 'imagineSave.mat'];   % A .mat-file to save the GUI settings
+configFolder = getenv('IMAGINE_CONFIG_PATH');
+if isempty(configFolder) configFolder = SPref.sMFILEPATH, end;
+SPref.sSaveFilename = [configFolder, filesep, 'imagineSave.mat'];   % A .mat-file to save the GUI settings
 addpath([SPref.sMFILEPATH, filesep, 'EvalFunctions'], ...
         [SPref.sMFILEPATH, filesep, 'colormaps'], ...
         [SPref.sMFILEPATH, filesep, 'import'], ...
